@@ -4,6 +4,7 @@ import { FaMoneyBill } from "react-icons/fa6";
 import { IoPersonOutline } from "react-icons/io5";
 import { MdAccessTime } from "react-icons/md";
 import { SlGraph } from "react-icons/sl";
+import dummyData from "@/dummy.json";
 
 export default function Home() {
   const totalBugdet = 54;
@@ -87,7 +88,7 @@ export default function Home() {
 
         {/* Expense Claim Directory */}
         <div className="mt-6">
-          <ExpenseList />
+          <ExpenseList expenses={dummyData} />
         </div>
       </div>
     </div>

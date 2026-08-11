@@ -1,6 +1,6 @@
 export default function Expense() {
   return (
-    <div>
+    <div className="w-full">
       <div>expense page</div>
     </div>
   );
