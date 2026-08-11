@@ -1,0 +1,23 @@
+{
+  "employee": "kermit",
+  "employeeId": "123",
+  "profilePicId": "123",
+  "claimId": "123",
+  "expenseTitle": "Github",
+  "expenseDesc": "Github annual subs",
+  "creationDate": "agust",
+  "category": "saas",
+  "amount": "2000",
+  "status": "pending",
+  "imageId": ".com",
+  "auditHisoty": [
+    {
+      "status": "accepted",
+      "username": "yuuna",
+      "role": "finance",
+      "dateTime": "7pm",
+      "action": "Approved",
+      "message": "Approved for business purpose"
+    }
+  ]
+}
