@@ -7,6 +7,7 @@ import { SlGraph } from "react-icons/sl";
 import dummyDataJson from "@/dummy.json";
 import dummyDataJson2 from "@/dummy2.json";
 import BudgetAllocation from "@/components/budgetAllocation/allocation";
+import Footer from "@/components/footer/footer";
 
 export default async function Home() {
   const totalBugdet = 70;
@@ -24,7 +25,7 @@ export default async function Home() {
   const dummyData = await getDummyData();
 
   return (
-    <div className="font-inter flex h-screen w-full justify-center overflow-y-auto">
+    <div className="font-inter flex h-screen w-full flex-col items-center overflow-y-auto">
       <div className="mt-8 h-fit w-[90%]">
         {/* Header */}
         <div className="flex h-fit w-full rounded-2xl bg-white p-4 outline-2 outline-gray-300">
@@ -132,6 +133,10 @@ export default async function Home() {
         <div className="mt-6">
           <BudgetAllocation budgetData={dummyDataJson2} />
         </div>
+      </div>
+
+      <div className="h-fit w-full">
+        <Footer />
       </div>
     </div>
   );

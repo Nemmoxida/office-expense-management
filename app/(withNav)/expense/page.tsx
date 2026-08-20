@@ -1,9 +1,10 @@
 import ExpenseList from "@/components/expense/expenseList";
+import Footer from "@/components/footer/footer";
 import dummy from "@/dummy.json";
 
 export default function Expense() {
   return (
-    <div className="font-inter flex h-screen w-full justify-center overflow-y-auto">
+    <div className="font-inter flex h-screen w-full flex-col items-center overflow-y-auto">
       {/* card to show like how many approved, pending, etc
           cancel expense claim
           bulk edit 
@@ -13,6 +14,10 @@ export default function Expense() {
         <div className="">
           <ExpenseList expenses={dummy} />
         </div>
+      </div>
+
+      <div className="h-fit w-full self-end">
+        <Footer />
       </div>
     </div>
   );

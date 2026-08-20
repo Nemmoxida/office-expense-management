@@ -57,26 +57,26 @@ export default function BudgetAllocation({ budgetData }: BudgetProps) {
                 <p className="font-bold">${e.spent}</p>
               </div>
               <div className="flex h-fit w-[50%] flex-col gap-1 rounded-lg bg-[#ececec] p-3">
-                <p className="text-xs">REMAINING</p>
-                <p className="font-bold text-green-500">${e.remaining} </p>
+                <p className="text-xs">BUDGET</p>
+                <p className="font-bold text-green-500">${e.budget} </p>
               </div>
             </div>
             <div className="mt-3 flex justify-between text-xs">
               <p>
-                Budget Used (${e.spent}/{e.remaining})
+                Budget Used (${e.spent}/{e.budget})
               </p>
-              <p className="">{Math.floor((e.spent / e.remaining) * 100)}%</p>
+              <p className="">{Math.floor((e.spent / e.budget) * 100)}%</p>
             </div>
             <div className="mt-3 h-3 w-full overflow-hidden rounded-full bg-[#ececec]">
               <div
                 style={{
-                  width: `${(e.spent / e.remaining) * 100}%`,
+                  width: `${(e.spent / e.budget) * 100}%`,
                 }}
-                className={`${Math.floor((e.spent / e.remaining) * 100) < 80 ? "bg-secondary" : Math.floor((e.spent / e.remaining) * 100) < 100 ? "bg-orange-400" : "bg-red-400"} h-full`}
+                className={`${Math.floor((e.spent / e.budget) * 100) < 80 ? "bg-secondary" : Math.floor((e.spent / e.budget) * 100) < 100 ? "bg-orange-400" : "bg-red-400"} h-full`}
               ></div>
             </div>
             <div
-              className={`mt-2 ${Math.floor((e.spent / e.remaining) * 100) < 80 ? "hidden" : "flex"} items-center gap-1 rounded-lg bg-[#fef8dd] p-1 text-xs`}
+              className={`mt-2 ${Math.floor((e.spent / e.budget) * 100) < 80 ? "hidden" : "flex"} items-center gap-1 rounded-lg bg-[#fef8dd] p-1 text-xs`}
             >
               <AiOutlineExclamationCircle color="orange" size={"1.2rem"} />
               <p>Approacing this month usage limit.</p>
